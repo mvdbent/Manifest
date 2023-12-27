@@ -1,5 +1,5 @@
 # Manifest
-<img src="https://github.com/mvdbent/Manifest/blob/main/icon.png" width="300">
+<img src="https://raw.githubusercontent.com/mvdbent/Manifest/main/icon.png" width="300">
 
 _**Current state of the scripts are:** "This project is 'As is" please be free to give me any feedback_
 
