@@ -36,6 +36,7 @@
 ####################################################################################################
 ####################################################################################################
 
+# Check for needed input, pkgPath and URL if one is missing exit 1
 if [[ $1 = "" ]]; then
     echo "Missing package path"
     echo "Example: ./CreatePKGManifest.sh /path/to/*.pkg https://*URL"
@@ -49,9 +50,13 @@ else
     url=$2
 fi
 
+# Fingerprint (checksum) if the PKG 
 md5=$(md5 $pkgPath | awk '{print $NF}')
+
+# The size of the pkg in bytes
 byteSize=$(stat -f%z $pkgPath)
 
+# Create Manifest file
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -79,4 +84,5 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   </dict>
 </plist>' > /Users/Shared/manifest.plist
 
+# Open location where Manifest is created.
 open /Users/Shared
