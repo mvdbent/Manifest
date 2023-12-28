@@ -21,7 +21,7 @@ We need to type in the following command in the terminal:
 
 For this example we are using the Signed Distribution Package in the GitHub repo /example-pkg/Branding-1.0-Distribution.pkg and we got the download URL by Right+Click or Ctrl+Click on the “raw” button of the Signed Distribution Package to  “Copy Link” https://github.com/mvdbent/Manifest/raw/main/Example-pkg/Branding-1.0-Distribution.pkg
 
-```bashg
+```bash
 ./CreatePKGManifest.sh /example-pkg/Branding-1.0-Distribution.pkg https://github.com/mvdbent/Manifest/raw/main/Example-pkg/Branding-1.0-Distribution.pkg
 ```
 
