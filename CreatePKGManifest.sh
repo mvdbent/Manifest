@@ -50,7 +50,7 @@ else
     url=$2
 fi
 
-# Fingerprint (checksum) if the PKG 
+# Fingerprint (checksum) of the PKG 
 md5=$(md5 $pkgPath | awk '{print $NF}')
 
 # The size of the pkg in bytes
